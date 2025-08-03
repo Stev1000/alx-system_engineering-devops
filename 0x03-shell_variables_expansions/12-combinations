@@ -1,2 +1,2 @@
 #!/bin/bash
-for i in $(echo {a..z}{a..z})$(echo); do if [ "$i" != "oo" ]; then echo $i; fi; done | awk '1'
+for i in $(echo {a..z}{a..z}); do if [ "$i" != oo ]; then echo "$i"; fi; done
