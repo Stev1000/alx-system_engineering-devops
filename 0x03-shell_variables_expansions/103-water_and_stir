@@ -1,0 +1,11 @@
+#!/bin/bash
+echo $(( $(echo "$WATER" | tr 'water' '01234') + $(echo "$STIR" | tr 'stir.' '0123') )) | awk '{ 
+    n=$1; 
+    b="bestchol"; 
+    o="";
+    while(n){ 
+        o=substr(b,n%8+1,1) o; 
+        n=int(n/8) 
+    } 
+    print o 
+}'
